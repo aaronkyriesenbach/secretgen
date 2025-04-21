@@ -24,5 +24,5 @@ func GetECDSAKeyPair(c *gin.Context) {
 		Bytes: bytes,
 	})
 
-	c.JSON(http.StatusOK, encoded)
+	c.JSON(http.StatusOK, gin.H{"key.pem": encoded})
 }
